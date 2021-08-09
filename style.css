@@ -8,7 +8,6 @@ body {
   background: #03045E;
   font-family: 'Quicksand', sans-serif;
   display: flex;
-
   align-items: center;
   justify-content: center;
   height: 100vh;
@@ -19,6 +18,7 @@ body {
 img {
   max-width: 100%;
 }
+
 .card {
 
   box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -74,4 +74,32 @@ img {
 .author-info small {
   color: #aaa;
   margin-top: 5px;
+}
+
+.animated-bg {
+  background-image: linear-gradient(
+    to right,
+    #0077B6 0%,
+    #00B4D8 10%,
+    #90E0EF 20%,
+    #CAF0F8 100%);
+  background-size: 200% 100% ;
+  animation: bgPos 1s linear infinite;
+}
+
+.animated-bg-text {
+  border-radius: 50px;
+  display: inline-block;
+  margin: 0;
+  height: 10px;
+  width: 100%;
+}
+
+@keyframes bgPos {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0 ;
+  }
 }
